@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import withIcon from "../hoc/withIcon";
 
 class Button extends Component {
   render() {
@@ -13,7 +14,7 @@ class Button extends Component {
       fontSize: "14px",
       height: "32px"
     };
-    console.log(this.props);
+
     return (
       <button
         style={{ ...buttonDefaultStyles, ...this.props.styles }}
@@ -34,4 +35,4 @@ Button.propTypes = {
   children: PropTypes.string.isRequired
 };
 
-export default Button;
+export default withIcon(Button);
