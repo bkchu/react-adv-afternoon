@@ -2,15 +2,11 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Button from "./components/Button/Button";
+import List from "./components/List/List";
 
 class App extends Component {
   render() {
     let buttonStyles = {
-      // styles: PropTypes.shape({
-      //   color: PropTypes.string,
-      //   backgroundColor: PropTypes.string,
-      //   border: PropTypes.string
-      // }),
       primary: {
         color: "#fff",
         backgroundColor: "#1890ff",
@@ -40,6 +36,7 @@ class App extends Component {
         <Button styles={buttonStyles.default}>Default</Button>
         <Button styles={buttonStyles.dashed}>Dashed</Button>
         <Button styles={buttonStyles.danger}>Danger</Button>
+        <List />
       </div>
     );
   }

@@ -32,7 +32,7 @@ Button.propTypes = {
     backgroundColor: PropTypes.string,
     border: PropTypes.string
   }),
-  children: PropTypes.string.isRequired
+  children: PropTypes.any.isRequired
 };
 
 export default withIcon(Button);
