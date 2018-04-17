@@ -1,17 +1,24 @@
 import React from "react";
 import withPeople from "../hoc/withPeople";
+import withFilter from "../hoc/withFilter";
 
-const List = ({ people }) => {
+const List = ({ people, filterThis, list }) => {
   return (
     <div>
-      {people[0] &&
-        people.map((person, index) => {
-          return (
-            <p key={index}>{`${person.name.first} ${person.name.last}`}</p>
-          );
-        })}
+      <h1>Filter</h1>
+      <button onClick={() => filterThis(people)}>Filter</button>
+      {list[0]
+        ? list.map((item, index) => {
+            return <p key={index}>{`${item.name}`}</p>;
+          })
+        : people[0] &&
+          people.map((person, index) => {
+            return <li key={index}>{`${person.name}`}</li>;
+          })}
+
+      <br />
     </div>
   );
 };
 
-export default withPeople(List);
+export default withFilter(withPeople(List));
