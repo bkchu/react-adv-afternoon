@@ -39,7 +39,7 @@ const withFilter = Component => {
           <Component
             {...this.props}
             filterThis={this.setList}
-            list={this.state.filteredItems}
+            filteredList={this.state.filteredItems}
           />
         </div>
       );
