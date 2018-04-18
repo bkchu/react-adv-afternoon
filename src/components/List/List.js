@@ -6,9 +6,16 @@ import withSort from "../hoc/withSort";
 const List = ({ people, filterThis, filteredList, sortThis, sortedList }) => {
   return (
     <div>
-      <h1>Filter</h1>
-      <button onClick={() => filterThis(people)}>Filter</button>
-      <button onClick={() => sortThis(people)}>Sort</button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div>
+          <h1>Filter</h1>
+          <button onClick={() => filterThis(people)}>Enable Filter</button>
+        </div>
+        <div>
+          <h1>Sort</h1>
+          <button onClick={() => sortThis(people)}>Enable Sort</button>
+        </div>
+      </div>
       <div
         style={{
           display: "flex",
